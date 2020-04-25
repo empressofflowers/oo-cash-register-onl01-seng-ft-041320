@@ -45,7 +45,7 @@ class CashRegister
   end
 
   def void_last_transaction
-    self.total = (total * ((100.0 - discount.to_f)/100)).to_i
+    self.total -= last_transaction_amount
   end
 
 end
